@@ -44,15 +44,15 @@ python main.py -l "Heidelberg, Germany" -m "networkx" -n 5 -r "length" -o "outpu
 
 The following parameters are available:
 
-| Parameter              | Short Option | Long Option         | Type   | Choices                                 | Default Value       | Description                                                                        |
-|------------------------|--------------|---------------------|--------|----------------------------------------|---------------------|------------------------------------------------------------------------------------|
-| Study Area Location    | -l           | --location          | String |                                        | "Dossenheim, Germany" | Study area, e.g., 'Heidelberg, Germany' (optional, default: 'Dossenheim, Germany') |
-| Centrality Method      | -m           | --centrality_method | String | "networkx" or "geographical"            | "networkx"           | Method to calculate centrality (optional, default: networkx)                      |
-| Number of Routes      | -n           | --num_outes         | Int    |                                        | N/A                 | Number of routes (only for the networkx method, optional)                        |
-| Route Type             | -r           | --route_type        | String | "length" or "travel_time"              | "length"            | Route type, optional, default: length                                            |
-| Output Folder          | -o           | --output_folder     | String |                                        | "output_results"    | Output folder for results (optional, default: output_results)                      |
-| Network Type           | -t           | --network_type      | String | "all_private", "all", "bike", "drive", "drive_service", "walk" | "drive" | Type of street network (optional, default: drive) |
-| Weighting Method       | -w           | --weighting         | String | "random" or "population"              | "random"            | Weighting method for geographical centrality (optional, default: random)         |
+| Parameter              | Short Option | Long Option         | Type   | Choices                                 | Default Value         | Description                               |
+|------------------------|--------------|---------------------|--------|----------------------------------------|-----------------------|-------------------------------------------|
+| Study Area Location    | -l           | --location          | String |                                        | "Dossenheim, Germany" | Study area, e.g., 'Heidelberg, Germany' (default: 'Dossenheim, Germany') |
+| Centrality Method      | -m           | --centrality_method | String | "networkx" or "geographical"            | "networkx"            | Method to calculate centrality (default: networkx) |
+| Number of Routes      | -n           | --num_outes         | Int    |                                        | -                     | Number of routes (only for the networkx method) |
+| Route Type             | -r           | --route_type        | String | "length" or "travel_time"              | "length"              | Route type, optional, default: length     |
+| Output Folder          | -o           | --output_folder     | String |                                        | "output_results"      | Output folder for results (default: output_results) |
+| Network Type           | -t           | --network_type      | String | "all_private", "all", "bike", "drive", "drive_service", "walk" | "drive"               | Type of street network (default: drive) |
+| Weighting Method       | -w           | --weighting         | String | "random" or "population"              | -                     | Weighting method for geographical centrality (default: random) |
 
 
 ## Dependencies

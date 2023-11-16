@@ -53,7 +53,7 @@ def parse_arguments() -> Namespace:
         nargs="?",
         default="Heidelberg, Germany",
         help="Study area, e.g., 'Heidelberg, Germany'"
-        " (optional, default: 'Heidelberg, Germany')",
+        " (default: 'Heidelberg, Germany')",
     )
     parser.add_argument(
         "-m",
@@ -62,13 +62,13 @@ def parse_arguments() -> Namespace:
         choices=["networkx", "geographical"],
         default="networkx",
         help="Method to calculate centrality "
-        "(networkx or geographical, optional, default: networkx)",
+        "(networkx or geographical, default: networkx)",
     )
     parser.add_argument(
         "-n",
         "--num_routes",
         type=int,
-        help="Number of routes (only for the networkx method, optional)",
+        help="Number of routes (only for the networkx method)",
     )
     parser.add_argument(
         "-r",
@@ -76,7 +76,7 @@ def parse_arguments() -> Namespace:
         type=str,
         choices=["length", "travel_time"],
         default="length",
-        help="Route type, optional, default: length)",
+        help="Route type for which the betweeness centrality will be calculated, (default: length)",
     )
     parser.add_argument(
         "-o",
@@ -84,7 +84,7 @@ def parse_arguments() -> Namespace:
         type=str,
         default="output_results",
         nargs="?",
-        help="Output folder for results (optional, default: output_results)",
+        help="Output folder for results (default: output_results)",
     )
     parser.add_argument(
         "-t",
@@ -92,14 +92,14 @@ def parse_arguments() -> Namespace:
         type=str,
         choices=["all_private", "all", "bike", "drive", "drive_service", "walk"],
         default="drive",
-        help="Type of street network (optional, default: drive)",
+        help="Type of street network (default: drive)",
     )
     parser.add_argument(
         "-w",
         "--weighting",
         type=str,
         choices=["random", "population"],
-        help="Weighting method for geographical centrality (optional, default: random)",
+        help="Weighting method for geographical centrality (default: random)",
     )
     args = parser.parse_args()
 
