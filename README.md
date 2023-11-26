@@ -31,7 +31,7 @@ Now, your environment is configured, and you're ready to run and contribute to t
 
 #### Raster Data
 
-The project requires raster data for the population-weighted geographical centrality analysis. In this project the [GHS population grid](https://ghsl.jrc.ec.europa.eu/ghs_pop2023.php) is used. The data is available on the [here](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/GHS_POP_E2030_GLOBE_R2023A_4326_3ss/V1-0/GHS_POP_E2030_GLOBE_R2023A_4326_3ss_V1_0.zip). Download the data and place it in the `data` folder as `ghspop_4326.tif`.
+The project requires raster data for the population-weighted geographical centrality analysis. In this project the [GHS population grid](https://ghsl.jrc.ec.europa.eu/ghs_pop2023.php) is used. The data is available on the [here](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/GHS_POP_E2030_GLOBE_R2023A_4326_3ss/V1-0/GHS_POP_E2030_GLOBE_R2023A_4326_3ss_V1_0.zip). Download the data, extract it and place the .tif-file in the `data` folder as `ghspop_4326.tif`.
 
 ## Usage
 
@@ -44,15 +44,15 @@ python main.py -l "Heidelberg, Germany" -m "networkx" -n 5 -r "length" -o "outpu
 
 The following parameters are available:
 
-| Parameter              | Short Option | Long Option         | Type   | Choices                                 | Default Value         | Description                               |
-|------------------------|--------------|---------------------|--------|----------------------------------------|-----------------------|-------------------------------------------|
-| Study Area Location    | -l           | --location          | String |                                        | "Dossenheim, Germany" | Study area, e.g., 'Heidelberg, Germany' (default: 'Dossenheim, Germany') |
-| Centrality Method      | -m           | --centrality_method | String | "networkx" or "geographical"            | "networkx"            | Method to calculate centrality (default: networkx) |
-| Number of Routes      | -n           | --num_outes         | Int    |                                        | -                     | Number of routes (only for the networkx method) |
-| Route Type             | -r           | --route_type        | String | "length" or "travel_time"              | "length"              | Route type, optional, default: length     |
-| Output Folder          | -o           | --output_folder     | String |                                        | "output_results"      | Output folder for results (default: output_results) |
-| Network Type           | -t           | --network_type      | String | "all_private", "all", "bike", "drive", "drive_service", "walk" | "drive"               | Type of street network (default: drive) |
-| Weighting Method       | -w           | --weighting         | String | "random" or "population"              | -                     | Weighting method for geographical centrality (default: random) |
+| Parameter              | Short Option | Long Option         | Type   | Choices                                 | Default Value         | Description                                                              |
+|------------------------|--------------|---------------------|--------|----------------------------------------|-----------------------|--------------------------------------------------------------------------|
+| Study Area Location    | -l           | --location          | String |                                        | "Dossenheim, Germany" | Study area, e.g., 'Heidelberg, Germany' (default: 'Heidelberg, Germany') |
+| Centrality Method      | -m           | --centrality_method | String | "networkx" or "geographical"            | "networkx"            | Method to calculate centrality (default: networkx)                       |
+| Number of Routes      | -n           | --num_outes         | Int    |                                        | -                     | Number of routes (only for the networkx method)                          |
+| Route Type             | -r           | --route_type        | String | "length" or "travel_time"              | "length"              | Route type, optional, default: length                                    |
+| Output Folder          | -o           | --output_folder     | String |                                        | "output_results"      | Output folder for results (default: output_results)                      |
+| Network Type           | -t           | --network_type      | String | "all_private", "all", "bike", "drive", "drive_service", "walk" | "drive"               | Type of street network (default: drive)                                  |
+| Weighting Method       | -w           | --weighting         | String | "random" or "population"              | -                     | Weighting method for geographical centrality (default: random)           |
 
 
 ## Dependencies
