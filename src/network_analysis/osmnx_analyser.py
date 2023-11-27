@@ -49,9 +49,12 @@ def osmnx_analyser(
         except nx.NetworkXNoPath:
             continue
         except Exception as e:
-            if "'NoneType' is not subscriptable" in str(
-                e
-            ) or "'NoneType' object object is not subscriptable" in str(e):
+            if (
+                "'NoneType' is not subscriptable" in str(e)
+                or "'NoneType' object object is not subscriptable" in str(e)
+                or "'NoneType' object is not subscriptable" in str(e)
+                or "graph contains no edges" in str(e)
+            ):
                 continue
             else:
                 log.error(f"An error occurred: {e}")

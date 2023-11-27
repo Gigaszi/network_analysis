@@ -98,6 +98,7 @@ def parse_arguments() -> Namespace:
         "-w",
         "--weighting",
         type=str,
+        default="random",
         choices=["random", "population"],
         help="Weighting method for geographical centrality (default: random)",
     )
